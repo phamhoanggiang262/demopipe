@@ -64,7 +64,7 @@ def multiqc_report = []
 workflow DEMOPIPE {
 
     ch_versions = Channel.empty()
-
+    
     //
     // SUBWORKFLOW: Read in samplesheet, validate and stage input files
     //
@@ -84,7 +84,7 @@ workflow DEMOPIPE {
     CUSTOM_DUMPSOFTWAREVERSIONS (
         ch_versions.unique().collectFile(name: 'collated_versions.yml')
     )
-
+    // test for home work
     //
     // MODULE: MultiQC
     //
